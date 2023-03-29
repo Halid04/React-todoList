@@ -1,0 +1,116 @@
+:root{
+  --primary-color: #FF6998;
+}
+
+body, html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+.addTask{
+  background-color: var(--primary-color);
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.addTask input{
+  width: 60%;
+  height: 40%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px black;
+}
+.addTask input:focus{
+  outline: 3px solid var(--primary-color);
+}
+
+.addTask button{
+  width: 20%;
+  height: 40%;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 3px 3px 15px black;
+  cursor: pointer;
+  transition: transform .3s ease-in;
+}
+.addTask button:hover{
+  transform: scale(.96);
+}
+.addTask button:active{
+  transform: scale(1.05);
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100vw;
+}
+
+.tasks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  transition: transform .3s ease-in-out;
+}
+.tasks:hover{
+  transform: scale(1.03);
+}
+
+.taskName{
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+  width: 50%;
+  box-shadow: 1px 1px 5px black;
+}
+
+.tasks button {
+  width: 20%;
+  height: 40%;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px black;
+  cursor: pointer;
+  transition: transform .3s ease-in;
+}
+.tasks button:hover{
+  transform: scale(.96);
+}
+.tasks button:active{
+  transform: scale(1.05);
+}
+
+.completeBtn{
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.deleteBtn{
+  background-color: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+
+@media screen and (min-width:900px) {
+  .tasks button {
+    width: 10%;
+    height: 50%;
+  }
+}
